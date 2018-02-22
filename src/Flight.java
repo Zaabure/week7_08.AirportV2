@@ -1,27 +1,29 @@
-//import java.util.HashMap;
-//
-//public class Flight {
-//    private String source;
-//    private String destination;
-//    //spojeni source a destination
-//    private HashMap<String, String> trasa;
-//    //pro jake letadlo letime
-//    private Airplane airplane;
-//
-//    public Flight(Airplane airplane, String source, String destination) {
-//        this.source = source;
-//        this.destination = destination;
-//        trasa = new HashMap<String, String>();
-//    }
-//
-//    public void addFlight(String ID) {
-//        trasa.put(source, destination);
-//    }
-//
-//    //print vsech tras letadla
-//    public String printFlights(String ID) {
-//
-//        return trasa.get("");
-//    }
-//
-//}
+public class Flight {
+
+    private String source;
+    private String destination;
+    private Airplane plane;
+
+    public Flight(String source, String destination, Airplane plane) {
+        this.source = source;
+        this.destination = destination;
+        this.plane = plane;
+    }
+
+    public String getSource() {
+        return source;
+    }
+
+    public String getDestination() {
+        return destination;
+    }
+
+    public Airplane getPlane() {
+        return plane;
+    }
+
+    @Override
+    public String toString() {
+        return plane.toString() + " (" + getSource() + "-" + getDestination() + ")";
+    }
+}
